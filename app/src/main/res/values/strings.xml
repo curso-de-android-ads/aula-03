@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Presente!</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="presente_logo">Presente Logo</string>
+    <string name="aulas">Registrar Aulas</string>
+    <string name="alunos">Alunos</string>
+    <string name="projetos">Projetos</string>
+    <string name="nome">Nome</string>
+    <string name="sexo">Sexo</string>
+    <string name="m">M</string>
+    <string name="f">F</string>
+    <string name="cpf">CPF</string>
+    <string name="rg">RG</string>
+    <string name="periodo">Período</string>
+    <string name="matricula">Matrícula</string>
+    <string name="curso">Curso</string>
+    <string name="desenvolvimento_jogos">Desenvolvimento de Jogos</string>
+    <string name="programacao_android">Programação para Android</string>
+    <string name="aluno_ativo">Aluno ativo?</string>
+    <string name="data_aula">Data da Aula</string>
+    <string name="resumo">Resumo</string>
+    <string name="marcar_presencas">Marcar Presenças</string>
+    <string-array name="periodos">
+        <item>2º período</item>
+        <item>3º período</item>
+        <item>4º período</item>
+        <item>5º período</item>
+        <item>6º período</item>
+        <item>7º período</item>
+    </string-array>
+    <string name="title_activity_cadastro_alunos">Cadastro de Alunos</string>
+
+
+
+</resources>
