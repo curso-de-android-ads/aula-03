@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Witalo Carlos X. Albuquerque"
+        android:id="@+id/tv_li_nome_aluno"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/aluno_ativo"
+        android:id="@+id/tv_li_aluno_ativo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="201215020236"
+        android:id="@+id/tv_li_matricula"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_li_nome_aluno"
+        android:layout_alignLeft="@+id/tv_li_nome_aluno"
+      />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/tv_li_aluno_ativo"
+        android:layout_alignLeft="@+id/tv_li_aluno_ativo"
+        android:layout_alignStart="@+id/tv_li_aluno_ativo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+</RelativeLayout>

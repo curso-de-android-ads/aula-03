@@ -31,6 +31,12 @@
     <string name="curso_ativo">Curso Ativo?</string>
     <string name="descricao">Descrição do Curso</string>
     <string name="carga_horaria">Carga Horária</string>
+    <string name="salvar">Salvar</string>
+    <string name="novo">Novo</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="editar">Editar</string>
+    <string name="deletar">Deletar</string>
+    <string name="enviar">Enviar</string>
     <string-array name="periodos">
         <item>2º período</item>
         <item>3º período</item>

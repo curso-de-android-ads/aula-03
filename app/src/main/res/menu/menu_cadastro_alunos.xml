@@ -4,4 +4,21 @@
     tools:context="com.cako.witalocarlos.presente.activity.CadastroAlunosActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/ac_salvar"
+        android:icon="@drawable/ic_salvar"
+        android:title="@string/salvar"
+        app:showAsAction="ifRoom"
+     ></item>
+
+    <item
+        android:id="@+id/ac_cancelar"
+        android:icon="@drawable/ic_cancelar"
+        android:title="@string/cancelar"
+        app:showAsAction="ifRoom"
+        ></item>
+    
+
+    
 </menu>

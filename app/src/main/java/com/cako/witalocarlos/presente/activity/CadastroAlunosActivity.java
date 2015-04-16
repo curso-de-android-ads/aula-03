@@ -1,19 +1,79 @@
 package com.cako.witalocarlos.presente.activity;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.Switch;
+
 
 import com.cako.witalocarlos.presente.R;
 
 
+import java.util.ArrayList;
+
+
 public class CadastroAlunosActivity extends ActionBarActivity {
+
+    EditText etNomeAluno;
+    EditText etCPF;
+    EditText etRG;
+    EditText etMatricula;
+    RadioButton rbSexoM;
+    RadioButton rbSexoF;
+    Spinner spPeriodos;
+    CheckBox cbCursoAndroid;
+    CheckBox cbCursoJogos;
+    Switch swAlunoAtivo;
+    Aluno aluno;
+    String periodo;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_alunos);
+
+        etNomeAluno = (EditText) findViewById(R.id.et_nome_aluno);
+        etCPF = (EditText) findViewById(R.id.et_cpf);
+        etRG = (EditText) findViewById(R.id.et_rg);
+        etMatricula = (EditText) findViewById(R.id.et_matricula);
+        rbSexoF = (RadioButton) findViewById(R.id.rb_sexo_f);
+        rbSexoM = (RadioButton) findViewById(R.id.rb_sexo_m);
+        cbCursoAndroid = (CheckBox) findViewById(R.id.ck_android);
+        cbCursoJogos = (CheckBox) findViewById(R.id.ck_jogos);
+        swAlunoAtivo = (Switch) findViewById(R.id.sw_aluno_ativo);
+        spPeriodos = (Spinner) findViewById(R.id.sp_periodos);
+        aluno = new Aluno();
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.periodos,
+                android.R.layout.simple_spinner_item);
+
+        spPeriodos.setAdapter(adapter);
+        spPeriodos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                periodo = (String) parent.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 
 
@@ -36,6 +96,73 @@ public class CadastroAlunosActivity extends ActionBarActivity {
             return true;
         }
 
+        if (id == R.id.ac_salvar){
+           return salvar(aluno);
+
+        }
+
+        if (id == R.id.ac_cancelar){
+               return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
+
+    private boolean salvar(Aluno aluno){
+
+        ArrayList<Curso> cursos = new ArrayList<>();
+        aluno.setNome(etNomeAluno.getText().toString());
+        aluno.setCpf(etCPF.getText().toString());
+        aluno.setRg(etRG.getText().toString());
+        aluno.setMatricula(etMatricula.getText().toString());
+
+        if (rbSexoF.isChecked()){
+            aluno.setSexo('F');
+        }
+        if (rbSexoM.isChecked()){
+            aluno.setSexo('M');
+        }
+
+        if(cbCursoJogos.isChecked()){
+            Curso cursoJogos = new Curso();
+            cursoJogos.setNome("Curso de Jogos");
+            cursos.add(cursoJogos);
+        }
+        if(cbCursoAndroid.isChecked()){
+            Curso cursoAndroid = new Curso();
+            cursoAndroid.setNome("Curso de Android");
+            cursos.add(cursoAndroid);
+        }
+
+        aluno.setCursos(cursos);
+        aluno.setAlunoAtivo(swAlunoAtivo.isChecked());
+        aluno.setPeriodo(periodo);
+
+        exibeDialogoSimples(aluno.toString(), this);
+
+        return true;
+    }
+
+    private void exibeDialogoSimples(String msg, Context context){
+        AlertDialog.Builder alert = new AlertDialog.Builder(context);
+        alert.setMessage(msg);
+        alert.setTitle("ATENÇÃO!");
+        alert.setNeutralButton("Ok", null);
+        alert.show();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
