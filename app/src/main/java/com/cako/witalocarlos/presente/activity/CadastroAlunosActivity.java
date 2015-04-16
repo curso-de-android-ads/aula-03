@@ -1,33 +1,26 @@
-package com.cako.witalocarlos.presente;
+package com.cako.witalocarlos.presente.activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+
+import com.cako.witalocarlos.presente.R;
 
 
-public class MainActivity extends ActionBarActivity {
+public class CadastroAlunosActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button btAlunos = (Button) findViewById(R.id.bt_alunos);
-        btAlunos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setContentView(R.layout.activity_cadastro_alunos);
-            }
-        });
+        setContentView(R.layout.activity_cadastro_alunos);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_cadastro_alunos, menu);
         return true;
     }
 

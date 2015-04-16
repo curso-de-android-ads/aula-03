@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context="com.cako.witalocarlos.presente.activity.CadastroCursoActivity">
+
+    <TextView
+        android:id="@+id/tv_nome_curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_nome_curso"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_nome_curso"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/tv_instrutor_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instrutor"
+        android:layout_below="@id/et_nome_curso"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_instrutor_nome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_instrutor_nome"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/tv_instrutor_matricula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/matricula_instrutor"
+        android:layout_below="@id/et_instrutor_nome"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_instrutor_matricula"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_instrutor_matricula"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tv_descricao_curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descricao"
+        android:layout_below="@id/et_instrutor_matricula"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_descricao_curso"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_descricao_curso"
+        android:inputType="textMultiLine"
+        android:maxLines="3"/>
+
+    <TextView
+        android:id="@+id/tv_carga_horaria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/carga_horaria"
+        android:layout_below="@id/et_descricao_curso"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_carga_horaria"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_carga_horaria"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tv_curso_ativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/curso_ativo"
+        android:layout_below="@id/et_carga_horaria"
+        android:layout_marginTop="15dp"/>
+
+    <Switch
+        android:id="@+id/sw_curso_ativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_curso_ativo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:textOff="Não"
+        android:textOn="Sim"
+        android:layout_below="@id/et_carga_horaria"/>
+
+
+
+
+</RelativeLayout>
