@@ -32,6 +32,10 @@
             android:name=".activity.CadastroCursoActivity"
             android:label="@string/title_activity_cadastro_curso" >
         </activity>
+        <activity
+            android:name=".activity.ListarAlunosActivity"
+            android:label="@string/alunos">
+         </activity>
     </application>
 
 </manifest>

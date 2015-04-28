@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/linearLayout"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:layout_toLeftOf="@+id/linearLayout"
+       android:layout_toStartOf="@+id/linearLayout">
+    <TextView
+        android:id="@+id/tv_lv_nome_aluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nome do Aluno Grande"
+        />
+
+    <TextView
+        android:id="@+id/tv_lv_matricula_aluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_lv_nome_aluno"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00000000000"
+        />
+   </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aluno_ativo"/>
+
+        <CheckBox
+            android:id="@+id/ck_lv_aluno_ativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:layout_marginTop="5dp"
+            />
+
+        </LinearLayout>
+
+
+</RelativeLayout>

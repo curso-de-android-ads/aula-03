@@ -1,5 +1,6 @@
 package com.cako.witalocarlos.presente.activity;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,7 +21,8 @@ public class MainActivity extends ActionBarActivity {
         btAlunos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.activity_cadastro_alunos);
+                Intent intent = new Intent(getApplicationContext(), ListarAlunosActivity.class);
+                startActivity(intent);
             }
         });
     }
