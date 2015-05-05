@@ -3,16 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.cako.witalocarlos.presente.activity.CadastroAlunosActivity">
 
+
+
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 
-    <item android:id="@+id/ac_salvar"
+    <item android:id="@+id/ac_novo"
 
-        android:title="Salvar"
+        android:title="Novo"
+
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/ac_cancelar"
-        android:title="Cancelar"
+    <item android:id="@+id/ac_editar"
+        android:title="Editar"
         app:showAsAction="ifRoom"/>
 
 </menu>

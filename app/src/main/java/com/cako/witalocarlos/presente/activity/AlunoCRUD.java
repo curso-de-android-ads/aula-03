@@ -104,7 +104,7 @@ public class AlunoCRUD {
         aluno.setCpf(cursor.getString(3));
         aluno.setRg(cursor.getString(4));
         aluno.setMatricula(cursor.getString(5));
-        aluno.setPeriodo(cursor.getInt(6));
+        aluno.setPeriodo(cursor.getString(6));
 
         if (cursor.getInt(7) == 1){
             aluno.setAlunoAtivo(true);

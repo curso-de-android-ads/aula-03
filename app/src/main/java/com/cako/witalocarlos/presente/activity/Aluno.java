@@ -14,7 +14,7 @@ public class Aluno implements Serializable{
     private String cpf;
     private String rg;
     private String matricula;
-    private Integer periodo;
+    private String periodo;
     private boolean alunoAtivo;
     private ArrayList<Curso> cursos;
 
@@ -74,11 +74,11 @@ public class Aluno implements Serializable{
         this.matricula = matricula;
     }
 
-    public Integer getPeriodo() {
+    public String getPeriodo() {
         return periodo;
     }
 
-    public void setPeriodo(Integer periodo) {
+    public void setPeriodo(String periodo) {
         this.periodo = periodo;
     }
 
