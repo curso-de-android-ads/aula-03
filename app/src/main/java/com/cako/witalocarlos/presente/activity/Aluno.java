@@ -1,12 +1,14 @@
 package com.cako.witalocarlos.presente.activity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by cassio on 14/04/15.
  */
-public class Aluno {
+public class Aluno implements Serializable{
 
+    private int id;
     private String nome;
     private Character sexo;
     private String cpf;
@@ -20,6 +22,16 @@ public class Aluno {
         this.nome = nome;
         this.matricula = matricula;
         this.alunoAtivo = alunoAtivo;
+    }
+
+    public Aluno(){};
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
