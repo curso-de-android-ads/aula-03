@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Present!</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="presente_logo">Present Logo</string>
+    <string name="aulas">Register Classes</string>
+    <string name="alunos">Students</string>
+    <string name="projetos">Projects</string>
+    <string name="nome">Name</string>
+    <string name="sexo">Genere</string>
+    <string name="m">M</string>
+    <string name="f">F</string>
+    <string name="cpf">Social ID</string>
+    <string name="rg">General Register</string>
+    <string name="periodo">Period</string>
+    <string name="matricula">Registration</string>
+    <string name="curso">Course</string>
+    <string name="desenvolvimento_jogos">Games Development</string>
+    <string name="programacao_android">Android Development</string>
+    <string name="aluno_ativo">Is Active?</string>
+    <string name="data_aula">Class Date</string>
+    <string name="resumo">Resume</string>
+    <string name="marcar_presencas">Record Student Presents</string>
+    <string name="aluno">Student</string>
+    <string name="titulo">Title</string>
+    <string name="nota">Evaluation Grade</string>
+    <string name="fazer_chamada">Record Student Presents</string>
+    <string name="instrutor">Instructor Name</string>
+    <string name="matricula_instrutor">Instructor Registration</string>
+    <string name="curso_ativo">Is Active?</string>
+    <string name="descricao">Descrption</string>
+    <string name="carga_horaria">Workload</string>
+    <string-array name="periodos">
+        <item>2º período</item>
+        <item>3º período</item>
+        <item>4º período</item>
+        <item>5º período</item>
+        <item>6º período</item>
+        <item>7º período</item>
+    </string-array>
+    <string name="title_activity_cadastro_alunos">Cadastro de Alunos</string>
+    <string name="title_activity_cadastro_projeto">Cadastro de Projetos</string>
+    <string name="title_activity_cadastro_aula">Cadastro de Aulas</string>
+    <string name="title_activity_cadastro_curso">Cadastro de Curso</string>
+
+
+
+</resources>

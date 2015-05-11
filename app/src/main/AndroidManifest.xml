@@ -2,6 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cako.witalocarlos.presente" >
 
+    <supports-screens android:smallScreens="false"
+        android:normalScreens="false"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:requiresSmallestWidthDp="600"/>
+
+    <compatible-screens>
+        <screen
+        android:screenDensity="hdpi"
+        android:screenSize="large"/>
+
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="xlarge"/>
+
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="large"/>
+
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="xlarge"/>
+
+    </compatible-screens>
+
+
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 

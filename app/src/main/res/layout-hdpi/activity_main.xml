@@ -12,8 +12,8 @@
         android:layout_height="200dp"
         android:id="@+id/iv_logo"
         android:src="@drawable/presente_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/bt_alunos"
@@ -22,9 +22,8 @@
         android:text="@string/alunos"
         android:layout_below="@id/iv_logo"
         android:layout_marginTop="10dp"
-        style="@style/texto_botao"
         android:background="@drawable/botao_padrao"
-        />
+        style="@style/texto_botao" />
 
     <Button
         android:id="@+id/bt_registrar_aula"

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="azul_titulo" type="color">#0099CC</item>
+    <item name="azul_subtitulo" type="color">#33B5E5</item>
+    <item name="branco" type="color">#FFFFFF</item>
+
+</resources>

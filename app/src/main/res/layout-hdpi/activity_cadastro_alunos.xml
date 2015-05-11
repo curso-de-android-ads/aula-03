@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -7,9 +7,7 @@
     android:background="#ffffff"
     tools:context="com.cako.witalocarlos.presente.activity.CadastroAlunosActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+
 
     <TextView
         android:id="@+id/tv_nome_aluno"
@@ -23,7 +21,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:layout_below="@id/tv_nome_aluno"/>
+        android:layout_below="@id/tv_nome_aluno"
+        android:layout_alignRight="@+id/et_matricula"
+        android:layout_alignEnd="@+id/et_matricula" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,55 +62,62 @@
 
     <EditText
         android:id="@+id/et_cpf"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:ems="11"
         android:maxLength="11"
         android:inputType="numberDecimal"
-        android:layout_below="@+id/tv_sexo"
-        android:layout_alignRight="@id/et_nome_aluno"
-     />
+        android:layout_above="@+id/tv_sexo"
+        android:layout_alignLeft="@+id/tv_cpf"
+        android:layout_alignStart="@+id/tv_cpf" />
 
     <TextView
         android:id="@+id/tv_cpf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cpf"
-        android:layout_above="@+id/et_cpf"
-        android:layout_alignLeft="@+id/et_cpf"
-        android:layout_alignStart="@+id/et_cpf" />
+        android:layout_alignBaseline="@+id/tv_nome_aluno"
+        android:layout_alignBottom="@+id/tv_nome_aluno"
+        android:layout_toRightOf="@+id/et_nome_aluno"
+        android:layout_toEndOf="@+id/et_nome_aluno"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp" />
 
     <TextView
         android:id="@+id/tv_rg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rg"
-        android:layout_below="@id/rg_sexo"
-        android:layout_marginTop="10dp"/>
+        android:layout_below="@+id/et_cpf"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/et_rg"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_rg"
-    />
+        android:layout_toLeftOf="@+id/et_cpf"
+        android:layout_toStartOf="@+id/et_cpf" />
 
     <TextView
         android:id="@+id/tv_periodos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_rg"
         android:text="@string/periodo"
-        android:layout_marginTop="10dp"/>
+        android:layout_below="@+id/rg_sexo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:id="@+id/sp_periodos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_periodos"
-        android:layout_marginTop="5dp"
         android:entries="@array/periodos"
-        android:paddingRight="10dp"/>
+        android:paddingRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/tv_periodos"
+        android:layout_alignStart="@+id/tv_periodos" />
 
     <EditText
         android:id="@+id/et_matricula"
@@ -119,28 +126,27 @@
         android:maxLength="12"
         android:ems="12"
         android:inputType="number"
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/tv_periodos"
-        android:layout_toRightOf="@id/et_matricula"
-        android:layout_alignRight="@id/sp_periodos"/>
+        android:layout_below="@+id/tv_matricula"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/tv_matricula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/matricula"
-        android:layout_above="@id/et_matricula"
-        android:layout_alignLeft="@id/et_matricula"
-        android:layout_alignStart="@id/et_matricula"/>
+        android:layout_below="@+id/sp_periodos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/tv_cursos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/curso"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/sp_periodos"
-     />
+        android:layout_below="@+id/et_matricula"
+        android:layout_alignRight="@+id/tv_nome_aluno"
+        android:layout_alignEnd="@+id/tv_nome_aluno" />
 
     <CheckBox
         android:id="@+id/ck_android"
@@ -176,5 +182,5 @@
         android:textOn="Sim"
         android:layout_below="@id/ck_jogos"/>
 
-    </RelativeLayout>
-</ScrollView>
+
+</RelativeLayout>
